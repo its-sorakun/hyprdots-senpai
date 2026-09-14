@@ -24,6 +24,7 @@ This repo contains configuration files for the following tools:
 | `waypaper/` | Waypaper | A wallpaper manager with a GUI picker |
 | `wlogout/` | Wlogout | A logout / power menu |
 | `nwg-look/` | nwg-look | Controls GTK app theming on Wayland |
+| `fish/` | Fish | The modern interactive shell |
 
 ---
 
@@ -42,7 +43,7 @@ Follow these steps carefully. You don't need to be a Linux expert — just follo
 Open your terminal and run the following command to install everything you need:
 
 ```bash
-sudo pacman -S hyprland waybar kitty rofi waypaper swaync wlogout hyprlock cava fastfetch neofetch nwg-look brightnessctl hyprshot xdg-desktop-portal-hyprland polkit-kde-agent qt5-wayland qt6-wayland
+sudo pacman -S hyprland waybar kitty rofi waypaper swaync wlogout hyprlock cava fastfetch neofetch nwg-look brightnessctl hyprshot xdg-desktop-portal-hyprland polkit-kde-agent qt5-wayland qt6-wayland playerctl eza zoxide bat starship
 ```
 
 > 💡 If `pacman` says a package is not found, it may be available in the **AUR**. Use an AUR helper like `yay` in that case.
@@ -167,12 +168,20 @@ All shortcuts use the `SUPER` key (the Windows key on most keyboards).
 - Has an alternate config stored in `waybar/alt_config/` for experimentation
 
 ### Hyprlock (`hyprlock/`)
-- Custom lock screen configuration
-- Config also referenced from `hypr/hyprlock.conf`
+- Completely overhauled into a minimalist, centered "Widget Hub" built natively with geometric shape primitives.
+- Features a live media tracker powered by an isolated `playerctl` script.
 
 ### Rofi (`rofi/`)
-- Used as the application launcher
-- Launched with `rofi -show drun -show-icons`
+- Used as the application launcher (`rofi -show drun -show-icons`).
+- Themed as a perfectly solid, opaque "Floating Islands" 4x3 grid layout using Catppuccin Mocha.
+
+### SwayNC (`swaync/`)
+- Notification Center styled with the official Catppuccin Mocha colors.
+- Custom flattened UI entirely devoid of drop-shadows, glassmorphism, or transparency.
+
+### Fish Shell (`fish/`)
+- Modernized according to 2026 standards, prioritizing synchronous initialization to prevent terminal race conditions.
+- Integrates native Catppuccin syntax highlighting and smart wrappers for `eza`, `zoxide`, and `bat`.
 
 ### Cava (`cava/`)
 - Terminal-based audio visualizer
