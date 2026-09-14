@@ -138,7 +138,7 @@ end
 alias bat='bat --theme="Catppuccin-mocha"'
 alias hc=herbstclient
 alias code='code-insiders'
-alias cf='clear && fastfetch'
+alias cff='clear && fastfetch'
 set MOZ_ENABLE_WAYLAND 1
 set XDG_CURRENT_DESKTOP sway
 
