@@ -1,7 +1,5 @@
 /*******************************************************************************
- * ROUNDED THEME FOR ROFI 
- * User                 : LR-Tech               
- * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ * CUSTOM GRID THEME FOR ROFI 
  *******************************************************************************/
 
 * {
@@ -17,83 +15,66 @@
 
 window {
     location:       center;
-    width:          35%;
-    border:         3px;
-    border-radius:  30px;
-    border-color:       transparent;
-    background-color:   @bb;
+    width:          50%;
+    border-radius:  20px;
+    background-color:   @bb; /* Outer opaque base */
 }
 
 mainbox {
-    padding:    40px;
-    text-color:         @fg0;
+    padding:    30px;
+    spacing:    20px;
+    children:   [ inputbar, listview ];
 }
 
 inputbar {
     background-color:   @se;
-    border-color:       @bg2;
-
-    border:         2px;
-    border-radius:  40px;
-
-    padding:    8px 16px;
-    spacing:    8px;
-    children:   [ prompt, entry ];
+    border-radius:      15px;
+    padding:            15px 20px;
+    spacing:            15px;
+    children:           [ prompt, entry ];
 }
 
 prompt {
-    text-color: @fg0;
+    text-color: @bor;
+    font:       "JetBrainsMono Bold 14";
 }
 
 entry {
-    placeholder:        "Search";
-    placeholder-color:  @fg0;
-}
-
-message {
-    margin:             12px 0 0;
-    border-radius:      40px;
-    border-color:       @bg2;
-    background-color:   @bg2;
-}
-
-textbox {
-    padding:    8px 24px;
+    placeholder:        "Search applications...";
+    placeholder-color:  @fg2;
 }
 
 listview {
     background-color:   transparent;
-
-    margin:     12px 0 0;
-    lines:      7;
-    columns:    1;
-
-    fixed-height: true;
+    columns:            4;
+    lines:              3;
+    spacing:            15px;
+    fixed-height:       true;
 }
 
 element {
-    padding:        8px 16px;
-    spacing:        8px;
-    border-radius:  40px;
+    orientation:    vertical;
+    padding:        20px 10px;
+    spacing:        10px;
+    border-radius:  15px;
 }
 
-element normal active {
-    text-color: @fg0;
-}
-
-element alternate active {
-    text-color: @fg0;
+element normal active, element alternate active {
+    text-color: @bor;
 }
 
 element selected normal, element selected active {
-    background-color:   @bor;
+    background-color:   @sel;
+    border:             2px;
+    border-color:       @bor;
 }
 
 element-icon {
-    size:           25px;
-    vertical-align: 2;
+    size:           64px;
+    horizontal-align: 0.5;
 }
 
 element-text {
-    text-color: @fg0;
+    horizontal-align: 0.5;
+    text-color:       inherit;
 }
