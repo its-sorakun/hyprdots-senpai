@@ -23,13 +23,8 @@ scale trough {
 trough slider {
   margin: -10px;
   border-radius: 12.6px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   transition: all 0.2s ease;
   background-color: #89b4fa;
-}
-
-trough slider:hover {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 0 8px #89b4fa;
 }
 
 trough {
@@ -38,7 +33,6 @@ trough {
 
 /* notifications */
 .notification-background {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #45475a;
   border-radius: 12.6px;
   margin: 18px;
   background: #181825;
@@ -49,10 +43,6 @@ trough {
 .notification-background .notification {
   padding: 7px;
   border-radius: 12.6px;
-}
-
-.notification-background .notification.critical {
-  box-shadow: inset 0 0 7px 0 #f38ba8;
 }
 
 .notification .notification-content {
@@ -99,7 +89,6 @@ trough {
 .notification .notification-action {
   border-radius: 7px;
   color: #cdd6f4;
-  box-shadow: inset 0 0 0 1px #45475a;
   margin: 4px;
   padding: 8px;
   font-size: 0.2rem; /* controls the button size not text size*/
@@ -135,7 +124,6 @@ trough {
 
 /* control center */
 .control-center {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #313244;
   border-radius: 12.6px;
   background-color: #1e1e2e;
   color: #cdd6f4;
@@ -144,16 +132,11 @@ trough {
 
 .control-center .notification-background {
   border-radius: 7px;
-  box-shadow: inset 0 0 0 1px #45475a;
   margin: 4px 10px;
 }
 
 .control-center .notification-background .notification {
   border-radius: 7px;
-}
-
-.control-center .notification-background .notification.low {
-  opacity: 0.8;
 }
 
 .control-center .widget-title > label {
@@ -165,7 +148,6 @@ trough {
   border-radius: 7px;
   color: #cdd6f4;
   background-color: #313244;
-  box-shadow: inset 0 0 0 1px #45475a;
   padding: 8px;
 }
 
@@ -187,7 +169,6 @@ trough {
 
 scrollbar slider {
   margin: -3px;
-  opacity: 0.8;
 }
 
 scrollbar trough {
@@ -205,7 +186,6 @@ scrollbar trough {
   font-size: initial;
   border-radius: 8px;
   background: #313244;
-  box-shadow: none;
 }
 
 .widget-dnd > switch:checked {
@@ -226,7 +206,6 @@ scrollbar trough {
 
 .mpris-overlay {
   background-color: #313244;
-  opacity: 0.9;
   padding: 15px 10px;
 }
 
@@ -263,10 +242,6 @@ scrollbar trough {
 
 .widget-mpris button:active {
   background-color: #45475a;
-}
-
-.widget-mpris button:disabled {
-  opacity: 0.5;
 }
 
 .widget-menubar > box > .menu-button-bar > button > label {
@@ -325,4 +300,17 @@ scrollbar trough {
 
 .image {
   padding-right: 0.5rem;
+}
+
+/* Flattened replacements for removed opacity elements */
+.control-center .notification-background .notification.low {
+  background-color: #181825; /* Mantle for lower priority */
+}
+
+.widget-mpris button:disabled {
+  color: #6c7086; /* Solid gray instead of opacity */
+}
+
+scrollbar slider {
+  background-color: #45475a; /* Solid color for sliders */
 }
