@@ -15,7 +15,7 @@
 
 window {
     location:       center;
-    width:          50%;
+    width:          40%;
     border-radius:  20px;
     background-color:   @bb; /* Outer opaque base */
 }
@@ -29,8 +29,8 @@ mainbox {
 inputbar {
     background-color:   @se;
     border-radius:      15px;
-    padding:            15px 20px;
-    spacing:            15px;
+    padding:            20px 20px;
+    spacing:            20px;
     children:           [ prompt, entry ];
 }
 
@@ -70,7 +70,7 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:           64px;
+    size:           48px;
     horizontal-align: 0.5;
 }
 
