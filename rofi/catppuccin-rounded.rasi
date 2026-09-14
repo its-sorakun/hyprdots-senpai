@@ -1,0 +1,19 @@
+* {
+    /* Catppuccin Mocha Palette */
+    bg0:    #1e1e2e; /* base */
+    bg1:    #181825; /* mantle */
+    bg2:    #313244; /* surface0 */
+    bg3:    #cba6f7; /* mauve */
+    fg0:    #cdd6f4; /* text */
+    fg1:    #bac2de; /* subtext1 */
+    fg2:    #a6adc8; /* subtext0 */
+    fg3:    #45475a; /* surface1 */
+    
+    /* Transparent overlays */
+    bb:     rgba ( 30, 30, 46, 75 % ); /* base with opacity */
+    se:     rgba ( 49, 50, 68, 60 % ); /* surface0 with opacity */
+    sel:    rgba ( 24, 24, 37, 90 % ); /* mantle with opacity */
+    bor:    #cba6f7; /* mauve border highlight */
+}
+
+@import "rounded-common.rasi"
