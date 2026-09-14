@@ -1,10 +1,16 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    #pokemon-colorscripts -r --no-title &
-        fastfetch & 
-	starship init fish | source &
-	thefuck --alias | source &
-	~/.config/fish/tty.sh &
+    # Fastfetch (System Info)
+    fastfetch
+    
+    # Initialize prompts and utilities synchronously to avoid race conditions
+    starship init fish | source
+    thefuck --alias | source
+    ~/.config/fish/tty.sh
+    
+    # Initialize smart directory jumping if installed
+    if type -q zoxide
+        zoxide init fish | source
+    end
 end
 
 
@@ -25,6 +31,21 @@ set -g fish_pager_color_progress $gray
 set -g fish_pager_color_prefix $mauve
 set -g fish_pager_color_completion $peach
 set -g fish_pager_color_description $gray
+
+# Syntax Highlighting Colors
+set -g fish_color_normal normal
+set -g fish_color_command $blue
+set -g fish_color_param $flamingo
+set -g fish_color_keyword $red
+set -g fish_color_quote $green
+set -g fish_color_redirection $pink
+set -g fish_color_end $peach
+set -g fish_color_error $red
+set -g fish_color_selection --background=$gray
+set -g fish_color_search_match --background=$gray
+set -g fish_color_operator $green
+set -g fish_color_escape $pink
+set -g fish_color_autosuggestion $gray
 
 # Some config
 set -g fish_greeting
@@ -135,7 +156,18 @@ end
 # end
 
 
-alias bat='bat --theme="Catppuccin-mocha"'
+if type -q bat
+    alias bat='bat --theme="Catppuccin-mocha"'
+    alias cat='bat'
+end
+
+if type -q eza
+    alias ls='eza --icons --group-directories-first'
+    alias ll='eza -lh --icons --git --group-directories-first'
+    alias la='eza -la --icons --group-directories-first'
+    alias lt='eza --tree --icons'
+end
+
 alias hc=herbstclient
 alias code='code-insiders'
 alias cff='clear && fastfetch'
@@ -143,5 +175,5 @@ set MOZ_ENABLE_WAYLAND 1
 set XDG_CURRENT_DESKTOP sway
 
 
-# Created by `pipx` on 2022-09-11 05:02:32
-set PATH $PATH /home/flicko/.local/bin
+# Add local user binaries to PATH
+fish_add_path $HOME/.local/bin
