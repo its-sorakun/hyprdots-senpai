@@ -77,3 +77,16 @@ button:focus {
 #reboot:hover {
 	background-color: rgba(166, 227, 161, 0.15);
 }
+
+/* --- Title Hack --- */
+#title {
+	background-image: none;
+	font-size: 24px;
+	font-weight: bold;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	min-height: 30px;
+}
+#title:hover {
+	background-color: transparent;
+}

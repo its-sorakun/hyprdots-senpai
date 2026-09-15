@@ -1,4 +1,9 @@
 {
+    "label" : "title",
+    "action" : "true",
+    "text" : "Matane!"
+}
+{
     "label" : "lock",
     "action" : "hyprlock",
     "text" : "lock",
