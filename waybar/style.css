@@ -172,3 +172,17 @@ window#waybar {
   transition: all 0.3s ease;
   color: @mauve;
 }
+
+#taskbar button {
+  border-radius: 1rem;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.3s ease;
+}
+
+#taskbar button.active {
+  background-color: @surface1;
+}
+
+#taskbar button:hover {
+  background-color: @surface2;
+}

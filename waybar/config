@@ -39,6 +39,7 @@
     "modules-left": [
     // "custom/appmenu",
     "hyprland/workspaces",
+    "wlr/taskbar",
     // "custom/appmenu"
     "custom/settings",
     // "custom/waybarthemes"
@@ -50,10 +51,8 @@
 
     // Modules Center
     "modules-center": [
-    //  "custom/waybar-media",
      "clock",
      "tray"
-
     ],
 
     // Modules Right    
