@@ -180,5 +180,6 @@ fish_add_path $HOME/.local/bin
 # Initialize starship prompt at the absolute bottom
 # This prevents other plugins or kitty shell integration from overriding the prompt symbol
 if status is-interactive
+    set -Ux STARSHIP_CONFIG $HOME/.config/starship/starship.toml
     starship init fish | source
 end
