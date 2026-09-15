@@ -163,12 +163,12 @@ All shortcuts use the `SUPER` key (the Windows key on most keyboards).
 - **XWayland:** Enabled for running older X11 applications
 
 ### Waybar (`waybar/`)
-- Styled with Catppuccin Mocha colors via `mocha.css`
-- Includes a custom Python script (`waybar-media.py`) for showing currently playing media
-- Has an alternate config stored in `waybar/alt_config/` for experimentation
+- Styled with a clean, fully opaque block aesthetic using Catppuccin Mocha colors.
+- Features a flat, borderless design for maximum minimalism.
+- Includes a custom Python script (`waybar-media.py`) for showing currently playing media.
 
 ### Hyprlock (`hyprlock/`)
-- Completely overhauled into a minimalist, centered "Widget Hub" built natively with geometric shape primitives.
+- A minimalist, centered "Widget Hub" built natively with geometric shape primitives.
 - Features a live media tracker powered by an isolated `playerctl` script.
 
 ### Rofi (`rofi/`)
@@ -178,6 +178,11 @@ All shortcuts use the `SUPER` key (the Windows key on most keyboards).
 ### SwayNC (`swaync/`)
 - Notification Center styled with the official Catppuccin Mocha colors.
 - Custom flattened UI entirely devoid of drop-shadows, glassmorphism, or transparency.
+
+### Wlogout (`wlogout/`)
+- A minimalist, single-column vertical list reminiscent of a GRUB boot menu.
+- Uses transparent backgrounds and subtle Catppuccin hover highlights instead of traditional heavy GTK buttons.
+- Features a custom static "Matane!" header natively integrated into the layout.
 
 ### Fish Shell (`fish/`)
 - Modernized according to 2026 standards, prioritizing synchronous initialization to prevent terminal race conditions.
