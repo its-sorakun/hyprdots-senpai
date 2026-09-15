@@ -2,8 +2,7 @@ if status is-interactive
     # Fastfetch (System Info)
     fastfetch
     
-    # Initialize prompts and utilities synchronously to avoid race conditions
-    starship init fish | source
+    # Initialize utilities
     thefuck --alias | source
     ~/.config/fish/tty.sh
     
@@ -177,3 +176,9 @@ set XDG_CURRENT_DESKTOP sway
 
 # Add local user binaries to PATH
 fish_add_path $HOME/.local/bin
+
+# Initialize starship prompt at the absolute bottom
+# This prevents other plugins or kitty shell integration from overriding the prompt symbol
+if status is-interactive
+    starship init fish | source
+end
