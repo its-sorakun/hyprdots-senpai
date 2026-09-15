@@ -19,30 +19,30 @@ window#waybar {
 }
 
 #workspaces {
-  border-radius: 50px;
+  border-radius: 0;
   margin: 4px;
-  background-color: @surface0;
-  border-bottom: 3px solid @lavender;
-  font-size: 1rem;
+  background-color: transparent;
+  font-size: 1.1rem;
 }
 
 #workspaces button {
   color: @lavender;
-  border-radius: 50px;
+  border-radius: 0;
   padding: 0.4rem;
   transition: all 0.3s ease;
+  background-color: transparent;
+  border: none;
 }
 
 #workspaces button.active {
   color: @yellow;
   text-shadow: 0 0 5px @yellow;
-  border-radius: 50px;
 }
 
 #workspaces button:hover {
   color: @pink;
-  background-color: @surface1;
-  border-radius: 1rem;
+  text-shadow: 0 0 5px @pink;
+  background-color: transparent;
   min-width: 40px;
   transition: all 0.3s ease;
 }
@@ -58,20 +58,20 @@ window#waybar {
 #custom-exit,
 #mpris,
 #network {
-  background-color: @surface0;
+  background-color: transparent;
   padding: 0.5rem 1rem;
   margin: 4px 2px;
-  border-radius: 50px;
-  border-bottom: 3px solid @surface1;
+  border-radius: 0;
+  border: none;
   transition: all 0.3s ease;
 }
 #custom-playerpause,
 #custom-playernext,
 #custom-playerprevious{
-  background-color: @surface0;
+  background-color: transparent;
   padding: 0.5rem 1rem;
   margin: 4px;
-  border-radius: 1rem;
+  border-radius: 0;
   color: @sapphire;
 }
 
@@ -129,7 +129,7 @@ window#waybar {
 }
 
 #tray {
-  border-radius: 50px;
+  padding: 0.2rem 0.5rem;
 }
 
 #window{
@@ -161,38 +161,29 @@ window#waybar {
 }
 
 #taskbar button {
-  border-radius: 1rem;
+  border-radius: 0;
   padding: 0.2rem 0.5rem;
   transition: all 0.3s ease;
+  background-color: transparent;
+  border: none;
 }
 
 #taskbar button.active {
-  background-color: @surface1;
+  background-color: transparent;
+  text-shadow: 0 0 5px @lavender;
 }
 
 #taskbar button:hover {
-  background-color: @surface2;
+  background-color: transparent;
+  text-shadow: 0 0 5px @text;
 }
 
-/* --- Color Coded Borders & Hover Effects --- */
+/* --- Seamless Hover Effects --- */
 
-#clock { border-bottom-color: @mauve; }
-#clock:hover { background-color: @mauve; color: @base; }
-
-#battery { border-bottom-color: @green; }
-#battery:hover { background-color: @green; color: @base; }
-
-#network { border-bottom-color: @sapphire; }
-#network:hover { background-color: @sapphire; color: @base; }
-
-#pulseaudio { border-bottom-color: @yellow; }
-#pulseaudio:hover { background-color: @yellow; color: @base; }
-
-#mpris { border-bottom-color: @peach; }
-#mpris:hover { background-color: @peach; color: @base; }
-
-#bluetooth { border-bottom-color: @blue; }
-#bluetooth:hover { background-color: @blue; color: @base; }
-
-#custom-exit { border-bottom-color: @red; }
-#custom-exit:hover { background-color: @red; color: @base; }
+#clock:hover { text-shadow: 0 0 5px @mauve; }
+#battery:hover { text-shadow: 0 0 5px @green; }
+#network:hover { text-shadow: 0 0 5px @sapphire; }
+#pulseaudio:hover { text-shadow: 0 0 5px @yellow; }
+#mpris:hover { text-shadow: 0 0 5px @peach; }
+#bluetooth:hover { text-shadow: 0 0 5px @blue; }
+#custom-exit:hover { text-shadow: 0 0 5px @red; }
