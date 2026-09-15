@@ -58,10 +58,7 @@
 
     // Modules Right    
     "modules-right": [
-    //  "custom/waybar-media",
-        "custom/playerprevious",
-        "custom/playerpause",
-        "custom/playernext",
+        "custom/waybar-media",
         "pulseaudio",
         "bluetooth",
         "network",

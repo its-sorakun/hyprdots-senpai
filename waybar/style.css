@@ -30,6 +30,7 @@ window#waybar {
   color: @lavender;
   border-radius: 1rem;
   padding: 0.4rem;
+  transition: all 0.3s ease;
 }
 
 #workspaces button.active {
@@ -41,6 +42,8 @@ window#waybar {
   color: @pink;
   background-color: @surface1;
   border-radius: 1rem;
+  min-width: 40px;
+  transition: all 0.3s ease;
 }
 #bluetooth,
 #custom-music,
@@ -153,3 +156,18 @@ window#waybar {
   border-radius: 1rem;
   font-size:1rem;
 } */
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+  100% { opacity: 0.8; }
+}
+
+#custom-waybar-media.playing {
+  animation: pulse 2s infinite ease-in-out;
+  color: @peach;
+}
+
+#custom-waybar-media {
+  transition: all 0.3s ease;
+}
