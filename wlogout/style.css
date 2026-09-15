@@ -1,50 +1,79 @@
 * {
+	all: unset;
 	background-image: none;
 	box-shadow: none;
+	font-family: 'JetBrainsMono Nerd Font', monospace;
 }
 
 window {
-	background-color: rgba(30, 30, 46, 0.90);
+	background-color: #1e1e2e;
 }
 
 button {
-	border-radius: 50px;
-	/* border-color: #89b4fa; */
-	text-decoration-color: #cdd6f4;
+	border-radius: 8px;
 	color: #cdd6f4;
-	background-color: #181825;
-	border-style: solid;
-	border-width: 1px;
+	background-color: transparent;
+	border: none;
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 25%;
+	background-position: 20px center;
+	background-size: 24px;
+	margin: 2px 0px;
+	min-height: 45px;
+	font-size: 16px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	padding-left: 80px;
+	transition: all 0.2s ease;
 }
 
-button:focus, button:active, button:hover {
-	/* 20% Overlay 2, 80% mantle */
-	background-color: rgb(48, 50, 66);
+button:focus {
 	outline-style: none;
 }
+
+/* --- Lock: Blue --- */
 #lock {
-    background-image: url("/home/senpai/.config/wlogout/icons/lock.svg");
+	background-image: url("/home/senpai/.config/wlogout/icons/mocha/blue/lock.svg");
+}
+#lock:hover {
+	background-color: rgba(137, 180, 250, 0.15);
 }
 
-#logout {
-    background-image: url("/home/senpai/.config/wlogout/icons/logout.svg");
-}
-
-#suspend {
-    background-image: url("/home/senpai/.config/wlogout/icons/suspend.svg");
-}
-
+/* --- Hibernate: Mauve --- */
 #hibernate {
-    background-image: url("/home/senpai/.config/wlogout/icons/hibernate.svg");
+	background-image: url("/home/senpai/.config/wlogout/icons/mocha/mauve/hibernate.svg");
+}
+#hibernate:hover {
+	background-color: rgba(203, 166, 247, 0.15);
 }
 
+/* --- Logout: Peach --- */
+#logout {
+	background-image: url("/home/senpai/.config/wlogout/icons/mocha/peach/logout.svg");
+}
+#logout:hover {
+	background-color: rgba(250, 179, 135, 0.15);
+}
+
+/* --- Shutdown: Red --- */
 #shutdown {
-    background-image: url("/home/senpai/.config/wlogout/icons/shutdown.svg");
+	background-image: url("/home/senpai/.config/wlogout/icons/mocha/red/shutdown.svg");
+}
+#shutdown:hover {
+	background-color: rgba(243, 139, 168, 0.15);
 }
 
+/* --- Suspend: Lavender --- */
+#suspend {
+	background-image: url("/home/senpai/.config/wlogout/icons/mocha/lavender/suspend.svg");
+}
+#suspend:hover {
+	background-color: rgba(180, 190, 254, 0.15);
+}
+
+/* --- Reboot: Green --- */
 #reboot {
-    background-image: url("/home/senpai/.config/wlogout/icons/reboot.svg");
+	background-image: url("/home/senpai/.config/wlogout/icons/mocha/green/reboot.svg");
+}
+#reboot:hover {
+	background-color: rgba(166, 227, 161, 0.15);
 }

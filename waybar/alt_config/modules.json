@@ -105,9 +105,9 @@
     
     // Power Menu
     "custom/exit": {
-        "format": "",
-        "on-click": "wlogout",
-        "tooltip": false
+        "format": "⏻",
+        "on-click": "wlogout -b 1 -L 500 -R 500 -T 300 -B 300",
+        "tooltip-format": "Power Menu"
     },
 
     // Keyboard State
