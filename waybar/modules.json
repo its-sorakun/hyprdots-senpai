@@ -241,8 +241,10 @@
     },
     // Native MPRIS Media Player
     "mpris": {
-        "format": "{player_icon} {dynamic}",
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "format": "{player_icon} {artist} - {title}",
+        "format-paused": "{status_icon} <i>{artist} - {title}</i>",
+        "title-len": 20,
+        "artist-len": 15,
         "player-icons": {
             "default": "▶",
             "mpv": "🎵",
