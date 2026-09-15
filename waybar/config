@@ -58,7 +58,7 @@
 
     // Modules Right    
     "modules-right": [
-        "custom/waybar-media",
+        "mpris",
         "pulseaudio",
         "bluetooth",
         "network",

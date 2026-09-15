@@ -55,7 +55,7 @@ window#waybar {
 #custom-lock,
 #custom-power,
 #custom-exit,
-#custom-waybar-media,
+#mpris,
 #network,
 #window{
   background-color: @surface0;
@@ -163,11 +163,12 @@ window#waybar {
   100% { opacity: 0.8; }
 }
 
-#custom-waybar-media.playing {
+#mpris.playing {
   animation: pulse 2s infinite ease-in-out;
   color: @peach;
 }
 
-#custom-waybar-media {
+#mpris {
   transition: all 0.3s ease;
+  color: @mauve;
 }
