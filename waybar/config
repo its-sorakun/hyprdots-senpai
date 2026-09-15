@@ -12,7 +12,6 @@
     "margin-left": 0,
     "margin-right": 0,
     "spacing": 0,
-
     // Position TOP
     "layer": "top",
     "margin-bottom": 1,
@@ -23,38 +22,31 @@
     // "position": "bottom",
     // "margin-top": 0,
     // "margin-bottom": 14,
-
     "layer": "top",
     "margin-left": 15,
     "margin-right": 15,
     "spacing": 0,
-
-
     // Load Modules
     "include": [
         ".config/waybar/modules.json",
     ],
-
     // Modules Left
     "modules-left": [
-    // "custom/appmenu",
-    "hyprland/workspaces",
-    "wlr/taskbar",
-    // "custom/appmenu"
-    "custom/settings",
-    // "custom/waybarthemes"
-
-    //  "group/quicklinks",
-    "hyprland/window"
-    //  "custom/starter"
+        // "custom/appmenu",
+        "hyprland/workspaces",
+        "wlr/taskbar",
+        // "custom/appmenu"
+        "custom/settings",
+        // "custom/waybarthemes"
+        //  "group/quicklinks",
+        "hyprland/window"
+        //  "custom/starter"
     ],
-
     // Modules Center
     "modules-center": [
-     "clock",
-     "tray"
+        "clock"
+        //  "tray"
     ],
-
     // Modules Right    
     "modules-right": [
         "mpris",
@@ -62,13 +54,12 @@
         "bluetooth",
         "network",
         "battery",
-    //  "group/hardware",
+        //  "group/hardware",
         //"cpu",
-       // "memory",
-    // "custom/wallpaper",
-       // "tray",
+        // "memory",
+        // "custom/wallpaper",
+        // "tray",
         "custom/exit"
-    // "custom/ml4w-welcome",
-
+        // "custom/ml4w-welcome",
     ]
 }
