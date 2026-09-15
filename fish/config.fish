@@ -161,7 +161,7 @@ if type -q bat
 end
 
 if type -q eza
-    alias ls='eza --icons --group-directories-first'
+    alias ls='eza -1 --icons --group-directories-first'
     alias ll='eza -lh --icons --git --group-directories-first'
     alias la='eza -la --icons --group-directories-first'
     alias lt='eza --tree --icons'
