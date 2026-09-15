@@ -14,28 +14,29 @@ window#waybar {
   color: @text;
   margin: 5px 5px;
   /* border: 2px solid @bordercolor1; */
-  border-radius: 50px 50px;
+  border-radius: 50px;
+  padding: 0 15px;
 }
 
 #workspaces {
-  border-radius: 1rem;
-  margin: 5px;
+  border-radius: 50px;
+  margin: 4px;
   background-color: @surface0;
-  /* margin-left: 1rem; */
-  /* color: @sky; */
+  border-bottom: 3px solid @lavender;
   font-size: 1rem;
 }
 
 #workspaces button {
   color: @lavender;
-  border-radius: 1rem;
+  border-radius: 50px;
   padding: 0.4rem;
   transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-  color: @peach;
-  border-radius: 1rem;
+  color: @yellow;
+  text-shadow: 0 0 5px @yellow;
+  border-radius: 50px;
 }
 
 #workspaces button:hover {
@@ -56,13 +57,13 @@ window#waybar {
 #custom-power,
 #custom-exit,
 #mpris,
-#network,
-#window{
+#network {
   background-color: @surface0;
   padding: 0.5rem 1rem;
-  margin: 4px;
-  border-radius: 1rem;
-  /* margin-right: 10px; */
+  margin: 4px 2px;
+  border-radius: 50px;
+  border-bottom: 3px solid @surface1;
+  transition: all 0.3s ease;
 }
 #custom-playerpause,
 #custom-playernext,
@@ -75,25 +76,18 @@ window#waybar {
 }
 
 #network {
-  color: @yellow;
-  border-radius: 1rem;
-  /* margin-right: 1rem; */
+  color: @sapphire;
 }
 
 #clock {
-  color: @rosewater;
-  /* border-radius: 0px 1rem 1rem 0px; */
-  border-radius: 1rem;
-  margin-right: 1rem;
+  color: @mauve;
 }
 
 #custom-exit{
-  color: @flamingo;
-  margin-left:10px;
+  color: @red;
 }
 
 #battery {
-  /* border-radius: 1rem; */
   color: @green;
 }
 
@@ -106,7 +100,7 @@ window#waybar {
 }
 
 #bluetooth{
-  color: @mauve;
+  color: @blue;
 }
 
 #backlight {
@@ -119,30 +113,23 @@ window#waybar {
 
 
 #pulseaudio {
-  color: @maroon;
-  /* border-radius: 1rem 0px 0px 1rem; */
-  margin-left: 1rem;
+  color: @yellow;
 }
 
 #custom-music {
   color: @mauve;
-  border-radius: 1rem;
 }
 
 #custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
     color: @lavender;
 }
 
 #custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
     color: @red;
 }
 
 #tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+  border-radius: 50px;
 }
 
 #window{
@@ -170,7 +157,7 @@ window#waybar {
 
 #mpris {
   transition: all 0.3s ease;
-  color: @mauve;
+  color: @peach;
 }
 
 #taskbar button {
@@ -186,3 +173,26 @@ window#waybar {
 #taskbar button:hover {
   background-color: @surface2;
 }
+
+/* --- Color Coded Borders & Hover Effects --- */
+
+#clock { border-bottom-color: @mauve; }
+#clock:hover { background-color: @mauve; color: @base; }
+
+#battery { border-bottom-color: @green; }
+#battery:hover { background-color: @green; color: @base; }
+
+#network { border-bottom-color: @sapphire; }
+#network:hover { background-color: @sapphire; color: @base; }
+
+#pulseaudio { border-bottom-color: @yellow; }
+#pulseaudio:hover { background-color: @yellow; color: @base; }
+
+#mpris { border-bottom-color: @peach; }
+#mpris:hover { background-color: @peach; color: @base; }
+
+#bluetooth { border-bottom-color: @blue; }
+#bluetooth:hover { background-color: @blue; color: @base; }
+
+#custom-exit { border-bottom-color: @red; }
+#custom-exit:hover { background-color: @red; color: @base; }
